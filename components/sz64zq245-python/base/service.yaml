@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: sz64zq245-python
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: sz64zq245-python 
+  name: sz64zq245-python
+spec:
+  ports:
+  - port: 8081 
+    targetPort: 8081 
+  selector:
+    app.kubernetes.io/instance: sz64zq245-python 

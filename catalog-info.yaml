@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: sz64zq245-python-gitops
+  description: This is GitOps manifest for sz64zq245-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=sz64zq245-python
+    backstage.io/kubernetes-id: sz64zq245-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: sz64zq245-python
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:sz64zq245-python
